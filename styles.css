@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --azul-profundo: #1a2a6c;
+    --azul-claro: #4a90e2;
+    --blanco-puro: #ffffff;
+    --texto-suave: #f0f0f0;
+    --azul-suave: #1543c0;
+    --azul-agua: #184aa7; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco-puro); /* Corregido de --navy */
+    color: var(--azul-claro);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+/* --- ENCABEZADO CENTRAL DHARA ALENA --- */
+.main-header-container {
+    padding: 20px 0; /* Espaciado mínimo para que sea lo primero que se vea */
+    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.butterfly-hero-area {
+    width: 120%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio pequeño antes del texto */
+}
+
+.butterfly-main {
+    width: 300px; /* Tamaño protagonista pero equilibrado */
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1));
+    /* Eliminamos position: absolute para que ocupe su propio espacio central */
+}
+
+.script-text {
+    font-family: 'Brush Script', cursive; 
+    font-size: 4rem;
+    color: #888;
+    display: block;
+    margin-bottom: 80px;
+}
+
+.event-owner-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: var(--azul-profundo); 
+    margin: 5px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.event-date-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #666;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+
+.main-profile-photo {
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+
+/* --- ESTILO DE LA FOTO CON MANCHA --- */
+.photo-wrapper {
+    position: relative;
+    width: 250px;  
+    height: 250px; 
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shape-back {
+    position: absolute;
+    width: 100%; /* Sobresale para crear el efecto artístico */
+    z-index: 1;
+    opacity: 0.6;
+    filter: brightness(1.2); /* Resalta la mancha */
+    pointer-events: none;
+}
+
+.photo-front {
+    position: relative;
+    width: 150%;
+    height: 140%;
+    z-index: 2;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* --- CALENDARIO --- */
+.calendar-container {
+    background-color: white;
+    padding: 60px;
+    max-width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'serif'; /* Para un look similar a la imagen */
+}
+
+.calendar-month {
+    font-family: 'Great Vibes', cursive; /* Usamos la tipografía elegante que ya tenemos */
+    color: var(--azul-profundo); /* Rosa suave de tus imágenes */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+.day-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.calendar-grid span {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+}
+
+/* El estilo para resaltar el día 31 */
+.special-day {
+    position: relative;
+    font-weight: bold;
+    color: #000;
+}
+
+.special-day::after {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #c94d4d; /* Círculo rosa */
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Opcional: Agregar un pequeño corazón sobre el día como en la imagen */
+.special-day::before {
+    content: '❤';
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 0.9rem;  
+    color: var(--azul-profundo);
+}
+
+/* --- NUEVO ESTILO CONTADOR --- */
+.contador-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contador-titulo {
+    font-family: 'Playfair Display', serif;
+    color: var(--azul-profundo); /* Rosado intenso como la imagen */
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contador-box {
+    background-color: var(--azul-profundo); /* Fondo rosado claro */
+    padding: 15px 0px;
+    border-radius: 20px; /* Bordes muy redondeados */
+    margin: 0 10px;
+}
+
+.numeros-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-block span {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; /* Números grandes */
+    color: white;
+    font-weight: 400;
+}
+
+.label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: -5px;
+    letter-spacing: 1px;
+}
+
+.separador-puntos {
+    color: white;
+    font-size: 2.5rem;
+    margin-top: -20px; /* Alinea los puntos con los números */
+}
+
+/*-----Foto debajo del contador-----*/
+.secondary-photo-container {
+    width: 90%;
+    max-width: 350px; /* Un poco más ancha que la circular */
+    margin: 30px auto;
+    padding: 10px;
+    background-color: var(--blanco-puro);
+    border-radius: 15px; /* Bordes redondeados suaves */
+    box-shadow: 0 10px 25px rgba(0.6, 0.6, 0.6, 0.6); /* Sombra azulada muy sutil */
+}
+
+.photo-landscape {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Redondeo interno */
+    display: block;
+    object-fit: cover;
+    border: 1px solid var(--gris-borde); /* Un borde fino para definirla sobre el fondo blanco */
+}
+
+/* --- SECCIÓN UBICACIÓN --- */
+.location-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.location-frame {
+    border: 5px solid var(--azul-profundo); /* Rosa suave */
+    border-radius: 30px;
+    padding: 30px 20px;
+    max-width: 300px;
+    margin: 0 auto 40px;
+    position: relative;
+    margin-bottom: -20px;
+}
+
+/* Simulación del lazo o moño (opcional si tienes la imagen) */
+.location-frame::before {
+     /* Puedes usar un SVG o imagen aquí */
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.event-title-main {
+    font-family: 'Great Vibes', cursive;
+    color: var(--azul-profundo);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.venue-name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.event-time, .event-address {
+    color: #000000;
+    font-weight: 300;
+}
+
+/* --- BOTÓN VER UBICACIÓN --- */
+.btn-location {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 40px;
+    background-color: var(--blanco-puro); /* Rosa muy claro */
+    color: var(--azul-profundo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 1px solid var(--azul-suave);
+    transition: all 0.3s ease;
+}
+
+.btn-location:hover {
+    background-color: #4087b6 ;
+    transform: scale(1.05);
+}
+
+
+
+/* --- SECCIÓN CARRETE DE PELÍCULA --- */
+.film-strip-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.film-strip-container {
+    position: relative;
+    max-width: 390px;
+    margin: 0 auto;
+}
+
+.film-strip {
+    display: flex;
+    gap: 5px;
+    background-color: #333; /* Fondo oscuro del rollo */
+    padding: 15px 5px;
+    border-top: 10px dashed #eee; /* Simula los agujeros de la cinta */
+    border-bottom: 10px dashed #eee;
+}
+
+.film-photo {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.film-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.film-label {
+    font-family: 'Great Vibes', cursive;
+    text-align: left;
+    margin-left: 20px;
+    font-size: 3rem;
+    color: #555;
+    transform: rotate(-5deg);
+    margin-top: -10px;
+}
+
+/* --- SECCIÓN CÓDIGO DE VESTIMENTA --- */
+.dress-code-section {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Evita scroll lateral por la bola disco */
+}
+
+.dress-code-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--azul-profundo); /* Rosa vibrante */
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.dress-code-container {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.dress-code-box {
+    background-color:var(--azul-agua); /* Rosa pastel de fondo */
+    padding: 30px 20px;
+    border-radius: 25px;
+    margin: 0 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.tematica-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+}
+
+.colores-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.collage-cointainer {
+    padding: 20px 0; /* Espaciado mínimo para que sea lo primero que se vea */
+    text-align: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collage-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio pequeño antes del texto */
+    margin-top: -80px;
+}
+
+.collage2 {
+    width: 450px; /* Tamaño protagonista pero equilibrado */
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1));
+    /* Eliminamos position: absolute para que ocupe su propio espacio central */
+}
+/* --- SECCIÓN MENSAJE FINAL --- */
+.final-message-section {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blanco-puro);
+    overflow: hidden; /* Evita desbordamientos en móvil */
+}
+
+/* --- ESTE ES EL MARGEN / RECUADRO --- */
+.message-container {
+    max-width: 390px;
+    width: 100%; /* Ocupa el ancho disponible en móvil */
+    margin-top: -60px ;
+    margin-bottom: 60px;
+    padding: 30px 20px; /* Espacio interno para el texto */
+    border: 4px solid #160458; /* Borde rosa suave como la referencia */
+    border-radius: 40px; /* Bordes muy redondeados elegantes */
+    background-color: var(--azul-profundo); /* Fondo sutil */
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+.invitation-text {
+    font-family: 'Brush Script'; /* Fuente cursiva suave */
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.decorative-element-wrapper {
+    position: relative;
+    width: 280px; /* Un poco más pequeño para móvil */
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Hace que el elemento decorativo suba un poco hacia el cuadro */
+}
+
+
+
+.decorative-img {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    height: auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
